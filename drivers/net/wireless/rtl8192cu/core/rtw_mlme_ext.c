@@ -478,11 +478,12 @@ static u8 init_channel_set(_adapter* padapter, u8 ChannelPlan, RT_CHANNEL_INFO *
 
 	if(b2_4GBand)
 	{
-		for(index=0;index<RTW_ChannelPlan2G[Index2G].Len;index++)
+//		for(index=0;index<RTW_ChannelPlan2G[Index2G].Len;index++)
+		for(index=0;index<14;index++)
 		{
 			channel_set[chanset_size].ChannelNum = RTW_ChannelPlan2G[Index2G].Channel[index];
 
-/*			if(RT_CHANNEL_DOMAIN_GLOBAL_DOAMIN == ChannelPlan) //Channel 1~11 is active, and 12~14 is passive
+/*			if(RT_CHANNEL_DOMAIN_GLOBAL_DOMAIN == ChannelPlan) //Channel 1~11 is active, and 12~14 is passive
 			{
 				if(channel_set[chanset_size].ChannelNum >= 1 && channel_set[chanset_size].ChannelNum <= 11)
 					channel_set[chanset_size].ScanType = SCAN_ACTIVE;
